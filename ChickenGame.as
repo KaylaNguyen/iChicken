@@ -213,52 +213,46 @@
 			chicken = new Tween(box, "x", Elastic.easeInOut, box.x, Math.random() * stage.stageWidth + stage.y, 2, true);
 			chicken.addEventListener(TweenEvent.MOTION_FINISH, startTween);
 		}*/
-				private function moveChic():void {
-					//if ( chicken.body.GetPosition().x <= stage.stageWidth )
-						//{
-							//trace(chicken.body.GetPosition().x);
-							var chicMove: Number = 0.1;
-							//generate random move
-							var randomMove: int = Math.random()*10;
-		/*					var timerForChic: Timer;
-							timerForChic=new Timer(200,0);
-							timerForChic.start();
-							if (randomMove < 5)
-								for (var i:int = 0; i < 3; i++)
-							{*/
-								
-								//chicken.body.GetPosition().x -= chicMove;
-							if (chicken.body.GetPosition().x >= 18)
-							{
-								//flip the object
-								//chicken.body.scaleY= -1;
-								//move the chicken to the left
-								chicken.body.GetPosition().x -= chicMove;
-							}
-							else if (chicken.body.GetPosition().x < 0)
-							{
-								//trace(chicken.body.GetPosition().x);
-								chicken.body.GetPosition().x += chicMove;
-							}
-							else
-								chicken.body.GetPosition().x -= chicMove;
-								trace(chicken.body.GetPosition().x);
-					//			timerForChic.reset();
-					//		}
-					//		else
-					//			//chicken.body._rotation = 180;
-					//			for (var j:int = 0; j < 3; j++)
-					//		{
-					//			chicken.body.GetPosition().x -= chicMove;
-					//			//timerForChic.reset();
-					//		}
-					//	}
-					//else
-					//	{
-					//		chicken.body.GetPosition().x = x;
-					//	}
-				//}
-			}
+		private function moveChic():void {
+			//if ( chicken.body.GetPosition().x <= stage.stageWidth )
+				//{
+					//trace(chicken.body.GetPosition().x);
+					var chicMove: Number = 0.1;
+					//generate random move
+					var randomMove: int = Math.random()*10;
+						
+					//chicken.body.GetPosition().x -= chicMove;
+					if (chicken.body.GetPosition().x >= 18)
+					{
+						//flip the object
+						//chicken.body.scaleY= -1;
+						//move the chicken to the left
+						chicken.body.GetPosition().x -= chicMove;
+					}
+					else if (chicken.body.GetPosition().x < 0)
+					{
+						//trace(chicken.body.GetPosition().x);
+						chicken.body.GetPosition().x += chicMove;
+					}
+					else
+						chicken.body.GetPosition().x -= chicMove;
+						trace(chicken.body.GetPosition().x);
+			//			timerForChic.reset();
+			//		}
+			//		else
+			//			//chicken.body._rotation = 180;
+			//			for (var j:int = 0; j < 3; j++)
+			//		{
+			//			chicken.body.GetPosition().x -= chicMove;
+			//			//timerForChic.reset();
+			//		}
+			//	}
+			//else
+			//	{
+			//		chicken.body.GetPosition().x = x;
+			//	}
+		//}
+		}
 
 		//remove stuck eggs everywhere
 		private function removeStuckEggs(): void {
